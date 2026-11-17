@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#faf9f6" />
+  <meta name="description" content="Shrevya Technologies — Google Workspace and Microsoft 365 productivity solutions." />
+  <title>Shrevya Technologies — Enterprise Editorial Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #faf9f6;
+      --white: #ffffff;
+      --ink: #1c3035;
+      --muted: #53656a;
+      --teal: #08787d;
+      --teal-dark: #04646a;
+      --border: #dce4e2;
+      --panel: #f0f2ef;
+      --sans: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 400 16px/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #12b6b8; outline-offset: 4px; }
+    .container { width: min(calc(100% - 112px), 1352px); margin-inline: auto; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+    /* 01 — Header */
+    .header { position: relative; z-index: 20; border-bottom: 1px solid #e0e5e1; background: var(--paper); }
+    .header__inner { display: flex; align-items: center; min-height: 96px; gap: 32px; }
+    .brand { display: flex; align-items: center; gap: 15px; flex-shrink: 0; }
+    .brand__mark { display: block; width: 52px; height: 52px; object-fit: cover; }
+    .brand__name { color: #173035; font: 700 17px/1.19 var(--sans); letter-spacing: -.03em; text-transform: uppercase; }
+    .nav { margin-left: auto; display: flex; align-items: center; gap: clamp(30px, 3.6vw, 60px); }
+    .nav a { font-size: 17px; color: #33484f; font-weight: 500; transition: color .2s ease; }
+    .nav a:hover { color: var(--teal); }
+    .nav a[aria-current="page"] { color: var(--teal); }
+    .header__cta { flex-shrink: 0; margin-left: clamp(22px, 4.5vw, 76px); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 31px; gap: 18px; background: var(--teal); color: #fff; border: 1px solid var(--teal); border-radius: 6px; font-size: 16px; font-weight: 700; line-height: 1; transition: background .2s ease, transform .2s ease; white-space: nowrap; }
+    .button:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .button svg { flex: 0 0 auto; }
+    .mobile-menu { display: none; }
+
+    /* 02 — Editorial hero */
+    .hero { padding: 49px 0 36px; }
+    .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .94fr); gap: clamp(48px, 7vw, 126px); align-items: center; }
+    .eyebrow { margin: 0; color: var(--teal); text-transform: uppercase; letter-spacing: -.015em; font-weight: 700; font-size: 14px; }
+    .hero h1 { margin: 44px 0 35px; color: var(--ink); font: 400 clamp(66px, 5.7vw, 88px)/.99 var(--serif); letter-spacing: -.026em; max-width: 750px; }
+    .hero__description { margin: 0; max-width: 575px; color: var(--muted); font-size: clamp(19px, 1.55vw, 25px); line-height: 1.48; letter-spacing: -.01em; }
+    .hero__actions { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-top: 45px; }
+    .hero__button { min-height: 60px; padding-inline: 25px; font-size: 18px; }
+    .inline-link { color: var(--teal); border-bottom: 2px solid var(--teal); font-size: 18px; font-weight: 700; line-height: 1.4; transition: color .2s ease; }
+    .inline-link:hover { color: #044a4e; }
+    .solution-panel { background: var(--panel); border-radius: 15px; padding: clamp(28px, 3.15vw, 49px); }
+    .solution-panel__title { margin: 0 0 26px; color: var(--teal); font-size: 14px; font-weight: 700; text-transform: uppercase; }
+    .solution-list { display: grid; gap: 16px; }
+    .solution-card { width: 100%; text-align: left; display: grid; grid-template-columns: 40px minmax(0, 1fr) 24px; gap: 24px; align-items: start; padding: 22px 27px; min-height: 142px; border: 1px solid #ccd9d6; border-radius: 5px; background: #fff; cursor: pointer; color: var(--ink); transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
+    .solution-card:hover { border-color: var(--teal); box-shadow: 0 12px 25px rgba(9, 42, 47, .08); transform: translateY(-1px); }
+    .solution-card__number { padding-top: 2px; color: var(--teal); font-size: 18px; font-weight: 700; }
+    .solution-card__name { display: block; font-size: clamp(23px, 2.1vw, 30px); font-weight: 700; line-height: 1.2; letter-spacing: -.04em; }
+    .solution-card__description { display: block; margin-top: 9px; color: var(--muted); font-size: clamp(15px, 1.35vw, 18px); line-height: 1.5; }
+    .solution-card__arrow { color: var(--teal); margin-top: 28px; transition: transform .2s ease; }
+    .solution-card:hover .solution-card__arrow { transform: translateX(4px); }
+    .solution-panel__footer { margin: 29px 4px 0; color: var(--muted); font-size: 17px; }
+    .solution-panel__footer span { padding: 0 8px; }
+
+    /* 03 — Support journey */
+    .journey { border-top: 1px solid var(--border); background: var(--white); padding: 38px 0 62px; }
+    .journey__eyebrow { margin: 0 0 18px; color: var(--teal); font-size: 14px; font-weight: 700; text-transform: uppercase; }
+    .journey h2 { font: 400 clamp(43px, 3.9vw, 62px)/1.06 var(--serif); margin: 0 0 36px; letter-spacing: -.018em; }
+    .journey__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .journey-step { padding: 8px 35px 1px 24px; min-height: 123px; border-left: 1px solid #cfdad7; }
+    .journey-step:first-child { padding-left: 0; border-left: 0; }
+    .journey-step .journey-step__number { margin: 0 0 10px; color: var(--teal); font-size: 17px; line-height: 1; font-weight: 700; }
+    .journey-step h3 { margin: 0 0 9px; font-size: clamp(20px, 1.75vw, 25px); font-weight: 700; line-height: 1.2; letter-spacing: -.03em; }
+    .journey-step p { margin: 0; color: var(--muted); font-size: clamp(15px, 1.28vw, 18px); line-height: 1.5; }
+    .preview-footer { margin: 0; padding: 22px; background: #f7f8f6; color: #6b7c7c; border-top: 1px solid var(--border); font-size: 12px; text-align: center; }
+
+    /* An honest placeholder for navigation destinations not in this three-section preview */
+    .preview-dialog { border: 1px solid var(--border); border-radius: 8px; padding: 30px; width: min(calc(100% - 40px), 460px); color: var(--ink); background: #fff; box-shadow: 0 25px 80px rgba(12,31,35,.22); }
+    .preview-dialog::backdrop { background: rgba(9, 31, 35, .5); }
+    .preview-dialog h2 { margin: 0 0 10px; font: 400 35px/1.06 var(--serif); }
+    .preview-dialog p { margin: 0 0 24px; color: var(--muted); }
+    .dialog-close { border: 1px solid var(--border); background: #fff; color: var(--ink); border-radius: 5px; padding: 11px 20px; cursor: pointer; }
+
+    @media (max-width: 1200px) {
+      .container { width: min(calc(100% - 72px), 1352px); }
+      .header__inner { gap: 18px; }
+      .nav { gap: 24px; }
+      .nav a { font-size: 15px; }
+      .header__cta { margin-left: 16px; }
+      .hero__grid { gap: 45px; }
+      .hero h1 { font-size: clamp(62px, 5.6vw, 84px); }
+      .solution-card { gap: 14px; padding: 19px 17px; }
+    }
+    @media (max-width: 900px) {
+      .nav, .header__cta { display: none; }
+      .header__inner { min-height: 76px; }
+      .mobile-menu { display: block; margin-left: auto; position: relative; }
+      .mobile-menu summary { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border: 1px solid var(--border); border-radius: 5px; list-style: none; cursor: pointer; }
+      .mobile-menu summary::-webkit-details-marker { display: none; }
+      .mobile-menu__panel { position: absolute; top: calc(100% + 10px); right: 0; width: min(290px, calc(100vw - 40px)); display: grid; padding: 11px; background: #fff; border: 1px solid var(--border); border-radius: 7px; box-shadow: 0 12px 35px rgba(0,0,0,.12); }
+      .mobile-menu__panel a, .mobile-menu__panel button { display: block; width: 100%; padding: 12px; text-align: left; border: none; background: none; font: 600 15px var(--sans); color: var(--ink); cursor: pointer; }
+      .mobile-menu__panel a:hover, .mobile-menu__panel button:hover { background: #eaf5f3; }
+      .mobile-menu__panel .mobile-cta { margin-top: 5px; text-align: center; background: var(--teal); color: #fff; border-radius: 4px; }
+      .hero__grid { grid-template-columns: 1fr; }
+      .hero h1 { max-width: 650px; margin-block: 30px 22px; font-size: clamp(68px, 10vw, 92px); }
+      .solution-panel { max-width: 740px; }
+      .journey-step { padding-inline: 23px; }
+    }
+    @media (max-width: 600px) {
+      .container { width: calc(100% - 40px); }
+      .brand__mark { width: 43px; height: 43px; }
+      .brand__name { font-size: 14px; }
+      .hero { padding: 38px 0; }
+      .eyebrow { font-size: 11px; }
+      .hero h1 { font-size: clamp(60px, 15vw, 82px); line-height: .94; margin-block: 28px 21px; }
+      .hero__description { font-size: 17px; }
+      .hero__actions { gap: 24px; margin-top: 30px; }
+      .hero__button { font-size: 15px; min-height: 54px; padding-inline: 18px; }
+      .inline-link { font-size: 15px; }
+      .solution-panel { padding: 23px 16px; border-radius: 9px; }
+      .solution-panel__title { font-size: 11px; }
+      .solution-card { min-height: 0; grid-template-columns: 25px minmax(0, 1fr) 15px; gap: 12px; padding: 16px 13px; }
+      .solution-card__number { font-size: 13px; }
+      .solution-card__name { font-size: 19px; }
+      .solution-card__description { font-size: 13px; }
+      .solution-card__arrow { width: 16px; margin-top: 20px; }
+      .solution-panel__footer { font-size: 12px; line-height: 1.8; margin-top: 19px; }
+      .solution-panel__footer span { padding: 0 3px; }
+      .journey { padding: 40px 0 45px; }
+      .journey__eyebrow { font-size: 11px; }
+      .journey h2 { font-size: clamp(45px, 11vw, 62px); margin-bottom: 25px; }
+      .journey__grid { grid-template-columns: 1fr; gap: 20px; }
+      .journey-step, .journey-step:first-child { min-height: 0; padding: 0 0 0 18px; border-left: 2px solid var(--border); }
+      .journey-step h3 { font-size: 22px; }
+      .journey-step p { font-size: 15px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- COMPONENT 01: NAVIGATION -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Shrevya Technologies — Home">
+        <img class="brand__mark" src="./assets/shrevya-logo.png" width="52" height="52" alt="" />
+        <span class="brand__name">Shrevya<br />Technologies</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#solutions">Solutions</a>
+        <a href="#" data-preview="About us">About us</a>
+        <a href="#" data-preview="Insights">Insights</a>
+        <a href="mailto:info@shrevya.com">Contact</a>
+      </nav>
+      <a class="button header__cta" href="mailto:info@shrevya.com?subject=Talk%20to%20an%20expert">Talk to an expert</a>
+      <details class="mobile-menu">
+        <summary aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </summary>
+        <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+          <a href="#solutions">Solutions</a>
+          <a href="#" data-preview="About us">About us</a>
+          <a href="#" data-preview="Insights">Insights</a>
+          <a href="mailto:info@shrevya.com">Contact</a>
+          <a class="mobile-cta" href="mailto:info@shrevya.com?subject=Talk%20to%20an%20expert">Talk to an expert</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- COMPONENT 02: HERO & SOLUTION SELECTOR -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Productivity solutions&nbsp; / &nbsp;Shrevya Technologies</p>
+          <h1 id="hero-title">Better tools.<br />Better teamwork.</h1>
+          <p class="hero__description">Google Workspace and Microsoft 365 solutions, with practical guidance from selection to support.</p>
+          <div class="hero__actions">
+            <a class="button hero__button" href="mailto:info@shrevya.com?subject=Discuss%20cloud%20productivity%20solutions">
+              Discuss your needs
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>
+            </a>
+            <a class="inline-link" href="#solutions">Explore solutions</a>
+          </div>
+        </div>
+        <aside class="solution-panel" id="solutions" aria-labelledby="solutions-title">
+          <h2 class="solution-panel__title" id="solutions-title">The right suite for your business</h2>
+          <div class="solution-list">
+            <button type="button" class="solution-card" data-preview="Google Workspace">
+              <span class="solution-card__number">01</span>
+              <span class="solution-card__content">
+                <strong class="solution-card__name">Google Workspace</strong>
+                <span class="solution-card__description">Business email, file sharing, meetings and everyday collaboration.</span>
+              </span>
+              <svg class="solution-card__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </button>
+            <button type="button" class="solution-card" data-preview="Microsoft 365">
+              <span class="solution-card__number">02</span>
+              <span class="solution-card__content">
+                <strong class="solution-card__name">Microsoft 365</strong>
+                <span class="solution-card__description">Familiar productivity apps, secure email and collaboration tools.</span>
+              </span>
+              <svg class="solution-card__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>
+            </button>
+          </div>
+          <p class="solution-panel__footer">Guidance <span aria-hidden="true">•</span> Licensing <span aria-hidden="true">•</span> Migration <span aria-hidden="true">•</span> Support</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- COMPONENT 03: HOW WE HELP / CLOUD JOURNEY -->
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <p class="journey__eyebrow">How we help</p>
+        <h2 id="journey-title">Support across your cloud journey.</h2>
+        <div class="journey__grid">
+          <div class="journey-step">
+            <p class="journey-step__number">01</p>
+            <h3>Choose the right plan</h3>
+            <p>Clear guidance for your organisation.</p>
+          </div>
+          <div class="journey-step">
+            <p class="journey-step__number">02</p>
+            <h3>Get set up</h3>
+            <p>Deployment, onboarding and migration.</p>
+          </div>
+          <div class="journey-step">
+            <p class="journey-step__number">03</p>
+            <h3>Keep things running</h3>
+            <p>Ongoing assistance for your team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="preview-footer">Shrevya Technologies — Design concept preview. The remaining pages are not implemented in this prototype.</footer>
+
+  <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="dialog-title">
+    <h2 id="dialog-title">Design preview</h2>
+    <p id="dialog-message">The selected page will be developed after the design direction is approved.</p>
+    <form method="dialog"><button class="dialog-close" type="submit">Close</button></form>
+  </dialog>
+  <script>
+    (() => {
+      const dialog = document.getElementById('preview-dialog');
+      const message = document.getElementById('dialog-message');
+      document.querySelectorAll('[data-preview]').forEach((item) => {
+        item.addEventListener('click', (event) => {
+          event.preventDefault();
+          message.textContent = `${item.dataset.preview} is not part of this three-section concept preview. The page can be developed after design approval.`;
+          if (typeof dialog.showModal === 'function') dialog.showModal();
+          else alert(message.textContent);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10242d" />
+  <meta name="description" content="Shrevya Technologies — cloud productivity solutions for Google Workspace and Microsoft 365." />
+  <title>Shrevya Technologies — Technology Partner Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark light;
+      --navy: #10242d;
+      --navy-deep: #0d2029;
+      --navy-card: #19353f;
+      --navy-card-hover: #21434d;
+      --turquoise: #19b7bc;
+      --turquoise-bright: #47e4df;
+      --turquoise-dark: #087f83;
+      --white: #ffffff;
+      --text-light: #f6fafb;
+      --text-muted: #bed0d4;
+      --ink: #173039;
+      --ink-soft: #5d7178;
+      --paper: #f5f7f7;
+      --border-light: #cddadd;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --container: 1370px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    :focus-visible { outline: 3px solid var(--turquoise-bright); outline-offset: 4px; }
+    .container { width: min(calc(100% - 108px), var(--container)); margin-inline: auto; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* 01 — Navigation */
+    .site-header { position: relative; z-index: 20; background: var(--navy); color: var(--text-light); border-bottom: 1px solid rgba(203, 236, 240, .13); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; min-height: 94px; gap: 38px; }
+    .brand { display: inline-flex; align-items: center; gap: 14px; flex-shrink: 0; }
+    .brand-mark { width: 52px; height: 52px; display: block; object-fit: cover; }
+    .brand-name { color: #fff; font-weight: 800; font-size: 18px; line-height: 1.15; letter-spacing: -.025em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: clamp(24px, 4vw, 60px); margin-left: auto; }
+    .nav-links > a { font-size: 17px; line-height: 1.2; font-weight: 500; white-space: nowrap; color: #d4e1e5; transition: color .2s ease; }
+    .nav-links > a:hover { color: var(--turquoise-bright); }
+    .header-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 51px; padding: 0 31px; background: var(--turquoise); border-radius: 7px; color: #06252e; font-weight: 700; font-size: 16px; white-space: nowrap; margin-left: clamp(15px, 3vw, 52px); transition: background .2s ease, transform .2s ease; }
+    .header-cta:hover, .button-primary:hover { background: #48dadb; transform: translateY(-1px); }
+    .mobile-menu { display: none; }
+
+    /* 02 — Hero section */
+    .hero { background: var(--navy); color: var(--text-light); padding: 60px 0 36px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .96fr); align-items: center; gap: clamp(48px, 6.4vw, 105px); }
+    .eyebrow { margin: 0; text-transform: uppercase; color: var(--turquoise-bright); font-weight: 700; font-size: 14px; line-height: 1.5; letter-spacing: .02em; }
+    .hero-title { max-width: 730px; margin: 40px 0 40px; font-weight: 800; letter-spacing: -.055em; line-height: 1.09; font-size: clamp(48px, 5.1vw, 78px); }
+    .hero-description { max-width: 590px; margin: 0; color: var(--text-muted); font-size: clamp(18px, 1.45vw, 23px); line-height: 1.55; font-weight: 400; }
+    .hero-actions { display: flex; align-items: center; gap: 34px; flex-wrap: wrap; margin-top: 47px; }
+    .button-primary { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 62px; padding: 0 29px; background: var(--turquoise); color: #092730; border-radius: 5px; font-size: 18px; font-weight: 700; transition: background .2s ease, transform .2s ease; }
+    .button-primary svg, .text-action svg, .platform-arrow svg { transition: transform .2s ease; }
+    .button-primary:hover svg, .text-action:hover svg, .platform-card:hover .platform-arrow svg { transform: translateX(4px); }
+    .text-action { display: inline-flex; align-items: center; gap: 9px; color: #f4fafb; font-size: 18px; font-weight: 600; }
+    .text-action:hover { color: var(--turquoise-bright); }
+    .arrow-icon { width: 23px; height: 23px; display: block; }
+    .process-panel { padding: 32px 33px 56px; background: #17313b; border: 1px solid rgba(166, 211, 221, .30); border-radius: 13px; }
+    .process-title { margin: 3px 0 26px 13px; color: #83e4e5; font-size: 16px; font-weight: 700; line-height: 1.35; text-transform: uppercase; }
+    .process-list { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 19px; }
+    .process-list li { position: relative; min-height: 105px; display: flex; align-items: flex-start; gap: 28px; padding: 20px 22px; background: #203d48; border: 1px solid rgba(166, 211, 221, .17); border-radius: 7px; }
+    .process-list li:not(:last-child)::after { content: ''; position: absolute; z-index: 0; top: 100%; left: 46px; width: 3px; height: 20px; background: var(--turquoise); }
+    .step-index { flex: 0 0 auto; display: grid; place-items: center; height: 47px; width: 47px; border-radius: 5px; background: var(--turquoise); color: #052832; font-size: 18px; font-weight: 800; }
+    .step-content { padding-top: 0; }
+    .step-content h3 { margin: 0 0 5px; color: #f5f9fa; font-size: 21px; font-weight: 700; letter-spacing: -.02em; text-transform: uppercase; }
+    .step-content p { margin: 0; color: var(--text-muted); font-size: 15px; line-height: 1.5; max-width: 300px; }
+
+    /* 03 — Productivity platform introduction */
+    .platforms { padding: 38px 0 72px; background: #f5f7f7; }
+    .section-eyebrow { margin: 0 0 19px; color: var(--turquoise-dark); font-size: 14px; font-weight: 700; text-transform: uppercase; }
+    .platforms h2 { margin: 0 0 26px; font-size: clamp(31px, 2.65vw, 43px); letter-spacing: -.048em; line-height: 1.18; font-weight: 700; }
+    .platform-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+    .platform-card { min-height: 130px; display: flex; gap: 28px; align-items: flex-start; padding: 24px 30px; background: #fff; border: 1px solid var(--border-light); border-radius: 8px; transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
+    .platform-card:hover { border-color: #65babc; box-shadow: 0 10px 25px rgba(13, 46, 54, .075); transform: translateY(-2px); }
+    .platform-index { padding-top: 3px; font-size: 16px; font-weight: 700; color: var(--turquoise-dark); flex: 0 0 26px; }
+    .platform-text { flex: 1; }
+    .platform-text h3 { margin: 0 0 13px; font-size: clamp(22px, 1.8vw, 29px); font-weight: 700; letter-spacing: -.035em; }
+    .platform-text p { margin: 0; color: var(--ink-soft); font-size: 18px; line-height: 1.5; }
+    .platform-arrow { margin-top: 16px; color: var(--turquoise-dark); flex: 0 0 auto; }
+
+    .preview-note { padding: 19px 24px; margin: 0 auto 25px; width: min(calc(100% - 108px), var(--container)); font-size: 13px; color: #688088; border: 1px dashed #b5c8ce; border-radius: 6px; text-align: center; }
+    .preview-toast { position: fixed; z-index: 50; bottom: 22px; left: 50%; transform: translate(-50%, 30px); pointer-events: none; padding: 14px 21px; border-radius: 7px; background: #0d2029; color: white; font-size: 14px; box-shadow: 0 15px 40px rgba(0,0,0,.2); opacity: 0; transition: opacity .2s ease, transform .2s ease; }
+    .preview-toast.is-visible { opacity: 1; transform: translate(-50%,0); }
+
+    @media (max-width: 1250px) {
+      .container { width: min(calc(100% - 72px), var(--container)); }
+      .header-inner { gap: 20px; }
+      .nav-links { gap: 25px; }
+      .header-cta { padding-inline: 20px; margin-left: 8px; }
+      .hero { padding-top: 54px; }
+      .hero-grid { gap: 42px; }
+      .hero-title { font-size: clamp(50px, 5.2vw, 67px); }
+      .process-panel { padding-inline: 23px; }
+    }
+    @media (max-width: 930px) {
+      .header-inner { min-height: 81px; }
+      .nav-links, .header-cta { display: none; }
+      .mobile-menu { display: block; margin-left: auto; position: relative; }
+      .mobile-menu summary { list-style: none; display: grid; place-items: center; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,.27); border-radius: 5px; cursor: pointer; }
+      .mobile-menu summary::-webkit-details-marker { display: none; }
+      .mobile-menu__panel { position: absolute; right: 0; top: calc(100% + 10px); background: #1b3640; border: 1px solid rgba(255,255,255,.2); box-shadow: 0 18px 35px rgba(0,0,0,.20); border-radius: 8px; width: min(300px, calc(100vw - 45px)); display: grid; padding: 10px; }
+      .mobile-menu__panel a { padding: 13px 14px; font-size: 15px; color: #f5f9fa; border-radius: 4px; }
+      .mobile-menu__panel a:hover { background: #27515b; }
+      .mobile-menu__panel .mobile-cta { background: var(--turquoise); color: #052832; font-weight: 700; margin-top: 8px; text-align: center; }
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; }
+      .hero-title { max-width: 750px; margin-block: 22px 25px; font-size: clamp(48px, 7.5vw, 74px); }
+      .hero-actions { margin-top: 31px; }
+      .process-panel { max-width: 750px; }
+      .platform-grid { gap: 18px; }
+      .platform-card { padding: 22px; gap: 15px; }
+      .platform-text p { font-size: 16px; }
+    }
+    @media (max-width: 600px) {
+      .container { width: calc(100% - 40px); }
+      .brand-mark { width: 43px; height: 43px; }
+      .brand-name { font-size: 14px; }
+      .hero { padding: 41px 0 48px; }
+      .eyebrow { font-size: 11px; }
+      .hero-title { font-size: clamp(42px, 11vw, 59px); line-height: 1.05; margin: 22px 0; }
+      .hero-description { font-size: 16px; }
+      .hero-actions { gap: 23px; }
+      .button-primary { min-height: 54px; font-size: 15px; padding-inline: 20px; }
+      .text-action { font-size: 15px; }
+      .process-panel { padding: 22px 16px; }
+      .process-title { margin: 0 0 19px; font-size: 13px; }
+      .process-list { gap: 15px; }
+      .process-list li { min-height: 98px; gap: 14px; padding: 15px 13px; }
+      .process-list li:not(:last-child)::after { left: 34px; height: 16px; }
+      .step-index { width: 40px; height: 40px; font-size: 15px; }
+      .step-content h3 { font-size: 16px; }
+      .step-content p { font-size: 13px; }
+      .platforms { padding: 37px 0 48px; }
+      .section-eyebrow { font-size: 11px; margin-bottom: 11px; }
+      .platforms h2 { font-size: clamp(30px, 8vw, 40px); }
+      .platform-grid { grid-template-columns: 1fr; }
+      .platform-text h3 { font-size: 21px; margin-bottom: 8px; }
+      .platform-text p { font-size: 14px; }
+      .platform-arrow { margin-top: 5px; }
+      .preview-note { width: calc(100% - 40px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- COMPONENT 01: NAVIGATION -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Shrevya Technologies, back to top">
+        <img class="brand-mark" src="./assets/shrevya-logo.png" alt="" width="52" height="52" />
+        <span class="brand-name">Shrevya<br>Technologies</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#platforms">Solutions</a>
+        <a href="#" data-preview="About Us">About us</a>
+        <a href="#" data-preview="Insights">Insights</a>
+        <a href="mailto:info@shrevya.com?subject=Website%20Enquiry">Contact</a>
+      </nav>
+      <a class="header-cta" href="mailto:info@shrevya.com?subject=Talk%20to%20a%20Shrevya%20Expert">Talk to an expert</a>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </summary>
+        <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+          <a href="#platforms">Solutions</a>
+          <a href="#" data-preview="About Us">About us</a>
+          <a href="#" data-preview="Insights">Insights</a>
+          <a href="mailto:info@shrevya.com">Contact</a>
+          <a class="mobile-cta" href="mailto:info@shrevya.com?subject=Talk%20to%20a%20Shrevya%20Expert">Talk to an expert</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <!-- COMPONENT 02: DARK TECHNOLOGY-PARTNER HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Cloud workplace solutions</p>
+          <h1 id="hero-title" class="hero-title">Your productivity stack, handled.</h1>
+          <p class="hero-description">From selecting licences to setting up teams and providing support — simplify the practical work behind business collaboration.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="mailto:info@shrevya.com?subject=Talk%20to%20a%20Specialist">
+              Talk to a specialist
+              <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="text-action" href="#platforms">
+              See our services
+              <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <aside class="process-panel" aria-label="How Shrevya supports your team">
+          <h2 class="process-title">How Shrevya supports your team</h2>
+          <ol class="process-list">
+            <li>
+              <span class="step-index" aria-hidden="true">01</span>
+              <div class="step-content"><h3>Select</h3><p>Understand your requirements and choose suitable plans.</p></div>
+            </li>
+            <li>
+              <span class="step-index" aria-hidden="true">02</span>
+              <div class="step-content"><h3>Deploy</h3><p>Configure, transition and get people working.</p></div>
+            </li>
+            <li>
+              <span class="step-index" aria-hidden="true">03</span>
+              <div class="step-content"><h3>Support</h3><p>Help your team use and manage the service.</p></div>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- COMPONENT 03: TWO PRODUCTIVITY PLATFORMS -->
+    <section class="platforms" id="platforms" aria-labelledby="platforms-title">
+      <div class="container">
+        <p class="section-eyebrow">Two leading productivity platforms</p>
+        <h2 id="platforms-title">The tools your people already know.</h2>
+        <div class="platform-grid">
+          <a class="platform-card" href="mailto:info@shrevya.com?subject=Google%20Workspace%20Enquiry" aria-label="Enquire about Google Workspace">
+            <span class="platform-index" aria-hidden="true">01</span>
+            <div class="platform-text">
+              <h3>Google Workspace</h3>
+              <p>Email, meetings and collaboration.</p>
+            </div>
+            <span class="platform-arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span>
+          </a>
+          <a class="platform-card" href="mailto:info@shrevya.com?subject=Microsoft%20365%20Enquiry" aria-label="Enquire about Microsoft 365">
+            <span class="platform-index" aria-hidden="true">02</span>
+            <div class="platform-text">
+              <h3>Microsoft 365</h3>
+              <p>Productivity apps, email and security.</p>
+            </div>
+            <span class="platform-arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="preview-note" role="note">Design preview: navigation, hero and services introduction only. Remaining pages have not been developed.</div>
+  <div class="preview-toast" id="preview-toast" role="status" aria-live="polite"></div>
+  <script>
+    // Preview-only navigation: avoid broken links for pages not implemented yet.
+    const toast = document.getElementById('preview-toast');
+    let toastTimeout;
+    document.querySelectorAll('[data-preview]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        toast.textContent = `${link.dataset.preview} will be included in the complete website.`;
+        toast.classList.add('is-visible');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => toast.classList.remove('is-visible'), 3200);
+        link.closest('details')?.removeAttribute('open');
+      });
+    });
+    document.querySelectorAll('.mobile-menu__panel a:not([data-preview])').forEach(link => {
+      link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+    });
+  </script>
+</body>
+</html>
